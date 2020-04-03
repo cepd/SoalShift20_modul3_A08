@@ -59,6 +59,13 @@ int main()
 	key_t key = 8808;
 	int shmid = shmget (key, sizeof(int[10][10]), IPC_CREAT | 0666);
 	hasil = shmat(shmid,0,0);
+	
+	if(shmid<0)
+	{
+		perror("shmget");
+		exit(1)
+	)
+			
 	int i;
 	int j;
 
