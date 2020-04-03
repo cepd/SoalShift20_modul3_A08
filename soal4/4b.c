@@ -18,7 +18,7 @@ void *factorial(void *num){
 	
 	int h,i,j;
 	long long ans = 0;
-	int fak = *((int *)num);
+	//int fak = *((int *)num);
 	pthread_t id = pthread_self();
 	for (i = 0; i <= 3; i++){
 		for(j=0; j<=4; j++){
