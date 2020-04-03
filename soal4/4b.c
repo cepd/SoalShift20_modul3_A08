@@ -16,6 +16,12 @@ void *factorial(void *num){
    	int shmid = shmget(key, sizeof(int), IPC_CREAT | 0666);
    	hasil = shmat(shmid, 0, 0);
 	
+	if(shmid<0)
+	{
+		perror("shmget");
+		exit(1)
+	)
+	
 	int h,i,j;
 	long long ans = 0;
 	//int fak = *((int *)num);
